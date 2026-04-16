@@ -1,94 +1,62 @@
-💳 Financial Fraud Detection System
-Using GAN, XGBoost & SMOTE
+# Financial Fraud Detection System Using GAN, XGBoost & SMOTE
 
-📌 Project Description
+## Project Overview
+This project aims to create a novel financial fraud detection system that leverages Generative Adversarial Networks (GANs), XGBoost, and the SMOTE (Synthetic Minority Over-sampling Technique) algorithm. By synthesizing new examples and effectively classifying transactions, we enhance the detection capabilities while minimizing false positives.
 
-This project implements a financial fraud detection system using machine learning and deep learning techniques. Due to the highly imbalanced nature of fraud datasets, techniques such as SMOTE and Generative Adversarial Networks (GANs) are used to enhance minority class representation and improve model performance.
+## Objectives
+- Develop a robust financial fraud detection system using state-of-the-art machine learning techniques.
+- Evaluate the performance of GANs in generating synthetic data for training.
+- Implement XGBoost for effective classification of financial transactions.
+- Assess the impact of SMOTE in improving detection rates of minority class instances (fraudulent transactions).
 
-The system preprocesses transaction data, balances the dataset, trains models, and evaluates fraud detection effectiveness using standard metrics.
+## Architecture
+The architecture of the system comprises three major components:
+1. **Data Preprocessing**: Clean and prepare the dataset for modeling, including handling missing values and scaling features.
+2. **GAN Implementation**: Utilize GANs to generate synthetic fraudulent transactions to balance the dataset.
+3. **XGBoost Classification**: Train an XGBoost classifier on the original and synthetic data to predict fraudulent activities.
 
-🎯 Objectives
+## Methods
+- **Data Preprocessing**: This involves scaling numerical features and encoding categorical variables.
+- **Generative Adversarial Networks (GANs)**: These networks consist of two models, a generator that creates synthetic instances and a discriminator that evaluates their authenticity.
+- **XGBoost**: A powerful gradient boosting framework that integrates various techniques to optimize classification tasks.
+- **SMOTE**: An oversampling technique that helps in countering class imbalance by creating synthetic samples of the minority class.
 
-Detect fraudulent financial transactions
+## Dataset Information
+The dataset contains financial transaction records, where each record includes features such as transaction amount, type, time, and a label indicating whether the transaction is fraudulent or not. The dataset is divided into training and testing sets to evaluate model performance.
 
-Handle class imbalance effectively
+## Installation Instructions
+To run the project, follow these instructions:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/dhanushgoudra2003/Financial-Fraud-Detection-System-using-GAN-XGBoost-SMOTE.git
+   cd Financial-Fraud-Detection-System-using-GAN-XGBoost-SMOTE
+   ```
+2. Install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Run the main script:
+   ```bash
+   python main.py
+   ```
 
-Improve recall and F1-score for fraud detection
+## Usage
+Upon executing the main script, the system will:
+- Load the dataset and preprocess it.
+- Generate synthetic fraudulent transactions using the GAN.
+- Train the XGBoost model on the prepared dataset.
+- Output the classification results, including precision, recall, and f1-score.
 
-Compare traditional ML and GAN-enhanced models
+## Results
+The system's performance can be evaluated based on various metrics: precision, recall, f1-score, and AUC-ROC curve. Detailed results will be logged after the execution of the main script.
 
+## Technologies Used
+- **Python**: The primary programming language used for this project.
+- **TensorFlow/Keras**: For implementing GANs.
+- **XGBoost**: To build the classification model.
+- **Pandas, Numpy**: For data manipulation and analysis.
+- **Matplotlib, Seaborn**: For visualizing results and performance metrics.
 
-🧠 Methods & Algorithms
-
-SMOTE (Synthetic Minority Oversampling Technique)
-
-GAN for synthetic fraud data generation
-
-XGBoost Classifier
-
-Feature encoding and scaling
-
-
-🗂 Dataset Information
-
-Format: CSV
-
-Target column: is_fraud
-
-Contains numerical and categorical transaction features
-
-Highly imbalanced real-world financial data
-
-
-⚙️ Project Workflow
-
-Load and clean data
-
-Encode categorical features
-
-Scale numerical features
-
-Handle imbalance using SMOTE
-
-Generate synthetic data using GAN
-
-Train XGBoost and GAN-enhanced models
-
-Evaluate model performance
-
-
-📊 Evaluation Metrics
-
-Accuracy
-
-Precision
-
-Recall
-
-F1-score
-
-ROC-AUC Score
-
-
-🚀 Results
-
-Improved fraud detection after applying SMOTE and GAN
-
-Better recall and F1-score compared to baseline models
-
-Strong generalization on test data
-
-
-🛠️ Technologies Used
-
-Python
-
-PyTorch
-
-Scikit-learn
-
-XGBoost
-
-Pandas, NumPy
-
-Matplotlib
+## Author
+Dhanush Goudra | dhanushgoudra2003@github.com  
+Date Updated: 2026-04-16 17:46:19 UTC
